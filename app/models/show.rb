@@ -7,5 +7,6 @@ class Show < ActiveRecord::Base
     array.new = [] 
     Actor.full_name.each do |name|
       array.new << name.show 
+    end 
   end 
 end
