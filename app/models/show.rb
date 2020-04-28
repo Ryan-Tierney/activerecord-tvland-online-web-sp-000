@@ -4,9 +4,10 @@ class Show < ActiveRecord::Base
   has_many :actors, through: :characters
   
   def actors_list 
-    array.new = [] 
+    new_array = [] 
     Actor.full_name.each do |name|
-      array.new << name.show 
+      new_array << name.show 
     end 
+    return new_array
   end 
 end
