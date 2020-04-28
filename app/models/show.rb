@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
   def actors_list 
     new_array = [] 
     self.actors.each do |name|
-      new_array << name
+      new_array << name.full_name
     end 
     return new_array
   end 
